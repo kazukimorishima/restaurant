@@ -1,0 +1,30 @@
+<h1>Inquiries index</h1>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col" style="width: 10%;">名前</th>
+      <th scope="col" style="width: 25%;">メール</th>
+      <th scope="col" style="width: 15%;">電話</th>
+      <th scope="col" style="width: 25%;">内容</th>
+      <th scope="col" style="width: 25%;">回答</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @inquiries.each do |i| %>
+        <tr>
+          <th scope="row"><%= i.name %></th>
+          <td><%= i.email %></td>
+          <td><%= i.phone %></td>
+          <td><%= link_to simple_format(i.content), new_inquiry_answer_path(i.id) %></td>
+          <td>
+          <% Answer.where(inquiry_id: i.id).each do |answer| %>
+            <%= simple_format(answer.answer) %>
+            <%= answer.created_at.strftime("%Y-%m-%d %H:%M") %>
+          <% end %>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>

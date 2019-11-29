@@ -1,0 +1,830 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+body {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/*カーソル追従*/
+
+#cursor {
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #808080;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  pointer-events: none;
+  transition: 0.1s;
+}
+
+#cursor.active {
+  transform: scale(0);
+}
+
+#stalker {
+  position: fixed;
+  -webkit-transform:
+  translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: #CCCCCC;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  transition: 0.3s;
+  opacity: .5;
+  pointer-events: none;
+}
+
+#stalker.active {
+  transform: scale(3);
+}
+
+
+
+/*header*/
+
+.header {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
+}
+
+.header-logo {
+    margin-left: 3%;
+    width: 37%;
+}
+
+.header-logo > h2 {
+    margin-top: 44px;
+    margin-bottom: 44px;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Petit Formal Script', cursive;
+    transition: .5s;
+}
+
+.header-nav {
+    width: 57%;
+    text-align: right;
+}
+
+.header-list {
+    list-style: none;
+    margin: 0;
+    margin-top: 47px;
+    margin-bottom: 47px;
+    transition: .5s;
+}
+
+.header-list > li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+.is-animation {
+    height: 80px;
+    opacity: 0.8;
+}
+
+.is-animation .header-logo > h2 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.is-animation .header-list {
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+
+
+
+/*main*/
+
+/*slider*/
+
+.slider-wrapper {
+    margin-top: 120px;
+    position: relative;
+}
+
+.slider > img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-text {
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    opacity: 0.9;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/*course*/
+
+.course-text {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.course-text-ja {
+    font-size: 1.4rem;
+}
+
+.course-text-en {
+    font-size: 0.8rem;
+}
+
+.course-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.course-title {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.course-title > p {
+    position: -webkit-sticky; /* Safariに対応する */
+    position: sticky; /* 要素を固定/解除する */
+}
+
+.course-title1 {
+    font-size: 1.5rem;
+    margin: 0;
+    top: 180px; /* 縦方向の閾値 */
+    left: 0;
+}
+
+.course-title2 {
+    font-size: 0.7rem;
+    margin: 0;
+    top: 215px; /* 縦方向の閾値 */
+    left: 0; /* 横方向の閾値 */
+}
+
+.course-image {
+    width: 70%;
+}
+
+.course-items {
+    margin-bottom: 100px;
+}
+
+.course-items > img {
+    width: 100%;
+}
+
+.course-items-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.course-items-text > p {
+    margin: 0;
+}
+
+
+
+
+/*space*/
+
+.space-text {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.space-text-ja {
+    font-size: 1.4rem;
+}
+
+.space-text-en {
+    font-size: 0.8rem;
+}
+
+.space-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.space-title {
+    width: 30%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.space-title > p {
+    position: -webkit-sticky; /* Safariに対応する */
+    position: sticky; /* 要素を固定/解除する */
+    top: 180px; /* 縦方向の閾値 */
+    left: 0;
+}
+
+.space-image {
+    width: 70%;
+    list-style: none;
+    padding: 0;
+}
+
+.space-image > li > img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+/*access*/
+
+.access-wrap {
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.access-title {
+    width: 30%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.access-title > p {
+    position: -webkit-sticky; /* Safariに対応する */
+    position: sticky; /* 要素を固定/解除する */
+    top: 180px; /* 縦方向の閾値 */
+    left: 0;
+}
+
+.access-right {
+    width: 70%;
+    font-size: 0.8rem;
+    margin-bottom: 80px;
+}
+
+.access-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.access-text1 {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.access-text2 {
+    width: 50%;
+}
+
+.access-text1-left {
+    width: 22%;
+}
+
+.access-text1-right {
+    width: 78%;
+}
+
+.access-map > iframe {
+    width: 100%;
+}
+
+
+
+
+/*contact*/
+
+.contact-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+.contact-title {
+    width: 30%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.contact-title > p {
+    position: -webkit-sticky; /* Safariに対応する */
+    position: sticky; /* 要素を固定/解除する */
+    top: 180px; /* 縦方向の閾値 */
+    left: 0;
+}
+
+.contact-form {
+    width: 70%;
+}
+
+.contact-text {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.contact-form-text {
+    margin-top: 30px;
+}
+
+.contact-form-box > input {
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    border:none;
+    background: #F5F5F5;
+}
+
+.ccc {
+    margin-bottom: 0px;
+}
+
+.contact-form-box2 > textarea {
+    width: 100%;
+    height: 150px;
+    font-size: 15px;
+    border:none;
+    background: #F5F5F5;
+}
+
+.contact-form-b {
+    margin-top: 20px;
+}
+
+.contact-form-b > input {
+    width: 150px;
+    height: 100px;
+}
+
+
+
+/*footer*/
+
+.footer {
+    color: white;
+    background-color: black;
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    margin-left: 3%;
+    width: 37%;
+}
+
+.footer-logo > h2 {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Petit Formal Script', cursive;
+}
+
+.footer-logo > h2 > a {
+    color: white;
+}
+
+.footer-nav {
+    width: 57%;
+    margin-right: 3%;
+    text-align: right;
+}
+
+.footer-list {
+    margin-top: 27px;
+    list-style: none;
+}
+
+.footer-list > li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    margin-left: 3px;
+}
+
+.footer-list > li > a {
+    color: white;
+}
+
+.footer-text {
+    font-size: 0.7rem;
+    margin-left: 3%;
+}
+
+.copyright {
+    text-align: right;
+    margin-right: 3%;
+    font-size: 0.7rem;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+/*タブレット用画面*/
+
+@media (max-width: 1060px) {
+    
+    /*header*/
+    
+    .header-logo {
+        width: 50%;
+    }
+    
+     /*ハンバーガーメニュー*/
+    
+    .global-nav {
+        position: fixed;
+        right: -320px; /* これで隠れる */
+        top: 0;
+        width: 250px; /* スマホに収ま�����������くらい */
+        height: 100vh;
+        padding-top: 40px;
+        background-color: #fff;
+        transition: all .6s;
+        z-index: 200;
+        overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+    }
+    
+    .hamburger {
+        position: absolute;
+        position: fixed;
+        right: 2rem;
+        top: 3rem;
+        width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+        height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+        cursor: pointer;
+        z-index: 300;
+    }
+    
+    .is-animation .hamburger {
+        right: 2rem;
+        top: 1.4rem;
+        transition: 0.5s;
+    }
+    
+    .global-nav__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .global-nav__item {
+        text-align: center;
+        padding: 0 14px;
+    }
+    
+    .global-nav__item a {
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        color: #111;
+    }
+    
+    .global-nav__item a:hover {
+        background-color: #eee;
+    }
+    
+    .hamburger__line {
+        position: absolute;
+        left: 11px;
+        width: 18px;
+        height: 1px;
+        background-color: #111;
+        transition: all .6s;
+    }
+    
+    .hamburger__line--1 {
+        top: 14px;
+    }
+    
+    .hamburger__line--2 {
+        top: 20px;
+    }
+    
+    .hamburger__line--3 {
+        top: 26px;
+    }
+    
+    .black-bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s;
+        cursor: pointer;
+    }
+    
+    /* 表示された時用のCSS */
+    .nav-open .global-nav {
+        right: 0;
+    }
+    
+    .nav-open .global-nav__list > li {
+        display: block;
+    }
+    
+    .nav-open .global-nav__list > li > a {
+        width: 150px;
+    }
+    
+    .nav-open .black-bg {
+        opacity: 0.7;
+        visibility: visible;
+    }
+    
+    .nav-open .hamburger {
+        right: 0;
+        top: 0;
+    }
+    
+    
+    .nav-open .hamburger__line--1 {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+    
+    .nav-open .hamburger__line--2 {
+        width: 0;
+        left: 50%;
+    }
+    
+    .nav-open .hamburger__line--3 {
+        transform: rotate(-45deg);
+        top: 20px;
+    }
+    
+    
+    
+    /*footer*/
+    
+    .footer-wrap {
+        display: block;
+    }
+    
+    .footer-logo {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    
+    .footer-nav {
+        width: 100%;
+        text-align: left;
+        margin-left: 3%;
+    }
+    
+    .footer-list {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .footer-text {
+        margin-left: 3%;
+        margin-top: 25px;
+    }
+    
+}
+
+
+/*スマホ用画面*/
+
+@media (max-width: 760px) {
+    
+    /*header*/
+    
+    .header-logo {
+        width: 70%;
+    }
+    
+    /*main*/
+    
+    /*course*/
+    
+    .course-wrap {
+        display: block;
+    }
+    
+    .course-title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    
+    .course-title1 {
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    .course-title2 {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+    
+    .course-image {
+        width: 100%;
+    }
+    
+    
+    /*space*/
+    
+    .space-wrap {
+        display: block;
+    }
+    
+    .space-title {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    
+    .space-image {
+        width: 100%;
+    }
+    
+    
+    
+    
+    /*access*/
+    
+    .access-wrap {
+        display: block;
+    }
+    
+    .access-title {
+        margin-bottom: 70px;
+    }
+    
+    .access-right {
+        width: 100%;
+    } 
+    
+    
+    .access-text {
+        display: block;
+    }
+    
+    .access-text1 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .access-text1-left {
+        width: 30%;
+    }
+    
+    .access-text1-right {
+        width: 70%;
+    }
+    
+    .access-text2 {
+        width: 100%;
+    }
+    
+    .access-map > iframe {
+        width: 100%;
+    }
+    
+    
+    
+    /*contact*/
+    
+    .contact-wrap {
+        display: block;
+    }
+    
+    .contact-title {
+        margin-bottom: 70px;
+    }
+    
+    .contact-form {
+        width: 100%;
+    }
+    
+    
+}
+
+
+
+
+
+/*admin*/
+
+.admin {
+    margin-top: 150px;
+}
+
+
+
+
+/*Inquiries*/
+
+th,td {
+    border: solid 1px;              /* 枠線指定 */
+}
+
+table {
+    border-collapse:  collapse;     /* セルの線を重ねる */
+    margin: 100px auto;
+    
+}
+
+table a {
+    color: blue;
+}
+
+
+
+
+
+/*answer*/
+
+.answer {
+    width: 50%;
+    margin: 200px auto;
+}
+
+#answer_answer {
+    width: 100%;
+    height: 150px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#answer-btn {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}

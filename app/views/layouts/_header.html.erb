@@ -1,0 +1,65 @@
+<div class="header">
+    <div class="header-logo">
+        <h2><a href="/">Ristorante due mamme</a></h2>
+    </div>
+    <nav class="header-nav global-nav">
+        <ul class="header-list global-nav__list">
+            <li class="global-nav__item"><a href="#1">HOME</a></li>
+            <li class="global-nav__item"><a href="#2">COURSE</a></li>
+            <li class="global-nav__item"><a href="#3">SPACE</a></li>
+            <li class="global-nav__item"><a href="#5">ACCESS</a></li>
+            <li class="global-nav__item"><a href="#4">CONTACT</a></li>
+            <li class="global-nav__item"><a href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
+            <li class="global-nav__item"><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="js-hamburger">
+      <span class="hamburger__line hamburger__line--1"></span>
+      <span class="hamburger__line hamburger__line--2"></span>
+      <span class="hamburger__line hamburger__line--3"></span>
+    </div>
+    <div class="black-bg" id="js-black-bg"></div>
+</div>
+
+
+
+
+<!--ハンバーガー-->
+
+<script>
+  function toggleNav() {
+    var body = document.body;
+    var hamburger = document.getElementById('js-hamburger');
+    var blackBg = document.getElementById('js-black-bg');
+  
+    hamburger.addEventListener('click', function() {
+      body.classList.toggle('nav-open');
+    });
+    blackBg.addEventListener('click', function() {
+      body.classList.remove('nav-open');
+    });
+  }
+  toggleNav();
+</script>
+
+
+
+
+
+<!--スクロールでヘッダーサイズを変更-->
+<script>
+    $(function() {
+      var $win = $(window),
+          $header = $('.header'),
+          animationClass = 'is-animation';
+    
+      $win.on('load scroll', function() {
+        var value = $(this).scrollTop();
+        if ( value > 100 ) {
+          $header.addClass(animationClass);
+        } else {
+          $header.removeClass(animationClass);
+        }
+      });
+    });
+</script>

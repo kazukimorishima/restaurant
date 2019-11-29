@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restaurant</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    
+    <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Petit+Formal+Script&display=swap" rel="stylesheet">
+    
+    <!--スライダープラグインslick-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick-theme.min.css">
+    
+    <!--jquery-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <body>
+    <div class="wrap" style="overflow: hidden;">
+    <div class="container">    
+      <%= render "layouts/header" %>
+      <%= yield %>
+    </div>
+    
+    <%= render "layouts/footer" %>
+   </div>  <!-- body 右側余白用 wrap end -->
+    <!--スライダープラグインslick-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1/slick/slick.min.js"></script>
+  </body>
+</html>

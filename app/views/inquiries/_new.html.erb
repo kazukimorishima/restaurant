@@ -1,0 +1,32 @@
+<div class="contact-text">
+    <p>お問い合せ</p>
+</div>
+<%= form_for @inquiry do |f| %>
+    <div class="contact-form-text">
+        <p>お名前</p>
+    </div>
+    <div class="contact-form-box">
+        <%= f.text_field :name %>
+    </div>
+    <div class="contact-form-text">
+        <p>メールアドレス</p>
+    </div>
+    <div class="contact-form-box">
+        <%= f.text_field :email %>
+    </div>
+    <div class="contact-form-text">
+        <p>電話番号</p>
+    </div>
+    <div class="contact-form-box">
+        <%= f.text_field :phone %>
+    </div>
+    <div class="contact-form-text">
+        <p class="ccc">お問い合わせ内容</p>
+    </div>
+    <div class="contact-form-box2">
+    　　<%= f.text_area :content %>
+    </div>
+    <div class="contact-form-b">
+        <%= f.submit "送信する" %>
+    </div>
+<% end %>
