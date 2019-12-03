@@ -55,7 +55,7 @@ Rails.application.configure do
   
   
   config.action_mailer.perform_caching = false
-  host = 'https://0afc623ce1784bb48cdaf0a74a9cf69b.vfs.cloud9.ap-southeast-1.amazonaws.com'
+  host = 'https://8ff9dde1cab241bebdd3aacf144f5e8b.vfs.cloud9.ap-northeast-1.amazonaws.com/'
   config.action_mailer.default_url_options = { host: host, port: 3000 }
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp

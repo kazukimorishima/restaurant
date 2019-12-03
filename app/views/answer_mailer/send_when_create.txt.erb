@@ -1,0 +1,8 @@
+===============================
+<%= @inquiry.name %>様 
+===============================
+名前：<%= @inquiry.name %>
+メール：<%= @inquiry.email %>
+電話：<%= @inquiry.phone %>
+内容：<%= simple_format(@inquiry.content) %>
+<p>回答：<%= simple_format(@answer.answer) %></p>

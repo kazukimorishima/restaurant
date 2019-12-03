@@ -414,9 +414,17 @@ a {
     margin-top: 20px;
 }
 
-.contact-form-b > input {
-    width: 150px;
-    height: 100px;
+#new_inquiry > div.contact-form-b > input[type=submit] {
+  background: #c0c0c0;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+#new_inquiry > div.contact-form-b > input[type=submit]:hover {
+  cursor: pointer;
 }
 
 
