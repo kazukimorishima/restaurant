@@ -15,6 +15,16 @@
  */
 
 
+.wrap {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+}
+
 body {
     margin: 0;
 }
@@ -23,6 +33,8 @@ a {
     color: black;
     text-decoration: none;
 }
+
+
 
 
 /*カーソル追従*/
@@ -80,7 +92,7 @@ a {
 
 .header-logo {
     margin-left: 3%;
-    width: 37%;
+    width: 35%;
 }
 
 .header-logo > h2 {
@@ -91,9 +103,18 @@ a {
     transition: .5s;
 }
 
+.header-logo > h2 > a {
+    color: black;
+}
+
+.header-logo > h2 > a:hover {
+    text-decoration: none;
+}
+
 .header-nav {
-    width: 57%;
+    width: 70%;
     text-align: right;
+    margin-right: 15px;
 }
 
 .header-list {
@@ -109,6 +130,15 @@ a {
     vertical-align: middle;
     font-size: 0.9rem;
     margin-left: 10px;
+    color: black;
+}
+
+.header-list > li > a {
+    color: black;
+}
+
+.header-list > li > a:hover {
+    text-decoration: none;
 }
 
 .is-animation {
@@ -180,8 +210,8 @@ a {
 .course-wrap {
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
 }
 
 .course-title {
@@ -235,6 +265,97 @@ a {
 
 
 
+
+/*dinner*/
+
+.dinner-text {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.dinner-text-ja {
+    font-size: 1.4rem;
+}
+
+.dinner-text-en {
+    font-size: 0.8rem;
+}
+
+.dinner-wrap {
+    display: flex;
+    justify-content: space-between;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
+}
+
+.dinner-title {
+    width: 30%;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.dinner-title > p {
+    position: -webkit-sticky; /* Safariに対応する */
+    position: sticky; /* 要素を固定/解除する */
+    top: 180px; /* 縦方向の閾値 */
+    left: 0;
+}
+
+.dinner-image {
+    width: 70%;
+    list-style: none;
+    padding: 0;
+}
+
+.dinner-image > li > img {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.dinner-btn {
+    margin-top: 100px;
+}
+
+.dinner-btn {
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: inline-block;
+  height: 30px;/*高さ*/
+  width: 600px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 20px;/*文字のサイズ*/
+  line-height: 30px;/*高さと合わせる*/
+  background: white;
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+}
+
+.dinner-btn {
+  text-shadow: 2px 2px 0px #EEEEEE;
+  font-size: 20px;
+}
+
+.dinner-btn > a {
+  display:inline-block;
+  transition: .5s;
+  color: black;
+}
+
+.dinner-btn > a:hover {
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+
+
 /*space*/
 
 .space-text {
@@ -254,8 +375,8 @@ a {
 .space-wrap {
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
 }
 
 .space-title {
@@ -295,8 +416,8 @@ a {
     margin-top: 150px;
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
 }
 
 .access-title {
@@ -356,8 +477,8 @@ a {
 .contact-wrap {
     display: flex;
     justify-content: space-between;
-    margin-left: 5%;
-    margin-right: 5%;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
     margin-top: 120px;
     margin-bottom: 80px;
 }
@@ -429,6 +550,190 @@ a {
 
 
 
+
+
+/*menu-page*/
+
+.menu-page {
+    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.menu {
+    margin-top: 120px;
+}
+
+.menu-top {
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+}
+
+.menu-title {
+  position: relative;
+  padding: 0.25em 0;
+  text-align: left;
+}
+
+.menu-title > h1 {
+    margin-bottom: 10px;
+}
+
+.menu-title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+.menu-text {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.menu-body {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
+}
+
+.menu-box {
+    margin-top: 100px;
+}
+
+.category-title {
+    width: 15%;
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-title > h2 {
+    margin-bottom: 10px;
+}
+
+.menu-box-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-list {
+    width: 45%;
+}
+
+.menu-tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-tab-title > h3 {
+    margin-bottom: 10px;
+}
+
+.title-cap {
+    font-size: 0.7rem;
+    color: gray;
+    margin: 0;
+}
+
+.menu-etc {
+    margin-top: 25px;
+}
+
+.menu-tab-image {
+    width: 45%;
+}
+
+.menu-tab-image > img {
+    width: 100%;
+}
+
+.menu-dessert-text2 {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+}
+
+.menu-box2 {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-box2-wrap {
+    width: 90%;
+}
+
+.category-title2 {
+    width: 35%;
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.menu-list2 {
+    width: 90%;
+}
+
+.menu-tab-title2 > h3 {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.menu-etc2 {
+    margin-top: 25px;
+    font-size: 0.8rem;
+}
+
+.menu-btn {
+    text-align: center;
+}
+
+.menu-top-btn {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.menu-top-btn {
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: inline-block;
+  height: 30px;/*高さ*/
+  width: 600px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 20px;/*文字のサイズ*/
+  line-height: 30px;/*高さと合わせる*/
+  background: white;
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+}
+
+.menu-top-btn {
+  text-shadow: 2px 2px 0px #EEEEEE;
+  font-size: 20px;
+}
+
+.menu-top-btn > a {
+  display:inline-block;
+  transition: .5s;
+  color: black;
+}
+
+.menu-top-btn > a:hover {
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
 /*footer*/
 
 .footer {
@@ -443,7 +748,7 @@ a {
 
 .footer-logo {
     margin-left: 3%;
-    width: 37%;
+    width: 35%;
 }
 
 .footer-logo > h2 {
@@ -453,10 +758,11 @@ a {
 
 .footer-logo > h2 > a {
     color: white;
+    text-decoration: none;
 }
 
 .footer-nav {
-    width: 57%;
+    width: 70%;
     margin-right: 3%;
     text-align: right;
 }
@@ -475,6 +781,7 @@ a {
 
 .footer-list > li > a {
     color: white;
+    text-decoration: none;
 }
 
 .footer-text {
@@ -782,6 +1089,23 @@ a {
     }
     
     
+    /*menu-page*/
+    
+    .menu-box-wrap {
+        display: block;
+    }
+    
+    .menu-box2 {
+        display: block;
+    }
+    
+    .category-title2 {
+        margin-top: 100px;
+    }
+    
+    .menu-tab-image > img {
+        margin-top: 20px;
+    }
 }
 
 
@@ -792,6 +1116,11 @@ a {
 
 .admin {
     margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.admin-list > li > a {
+    color: black;
 }
 
 
@@ -811,6 +1140,12 @@ table {
 
 table a {
     color: blue;
+}
+
+.Inquiries-top {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 20px;
 }
 
 

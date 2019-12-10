@@ -1,0 +1,354 @@
+<section class="menu-page">
+  <section class="slider-wrapper menu" >
+    <div class="slider">
+      <img src="DINNER7.jpg">
+      <img src="DINNER8.jpg">
+      <img src="DINNER10.jpg">
+      <img src="DINNER6.jpg">
+      <img src="DINNER9.jpg">
+    </div>
+  </section>
+  
+  <section class="menu-top">
+    <div class="menu-title">
+      <h1>MENU</h1>
+    </div>
+    <div class="menu-text">
+      <p>
+        創作ピザをメインに、パスタ、肉料理を展開しています。<br>
+        美しい磁器「ロイヤルコペンハーゲン」や、あの「Noma」で<br>
+        使用されている器も使用し、盛り付けの美しさにも力を<br>
+        入れています。ディナーではお酒に合うアラカルトも充実。<br>
+        ランチではコース料理を提供させて頂いていますので、<br>
+        そちらもお楽しみください。
+      </p>
+    </div>
+  </section>
+  
+  <section class="menu-body">
+    <div class="menu-box">
+      <div class="category-title">
+        <h2>Pizza</h2>
+      </div>
+      <div class="menu-box-wrap">
+        <div class="menu-list">
+          <% Menu.all.each do |menu| %>
+            <% if menu.category_id == 1 %>
+              <div class="menu-tab">
+                <div class="menu-tab-title">
+                  <h3><%= menu.name %></h3>
+                  <p class="title-cap">
+                    <%= menu.detail %>
+                  </p>
+                </div>
+                <div class="menu-price">
+                  <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+          <div class="menu-etc">
+            <p>etc...</p>
+          </div>
+        </div>
+        <div class="menu-tab-image">
+          <img src="menu1.jpg">
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu-box">
+      <div class="category-title">
+        <h2>Antipasti</h2>
+      </div>
+      <div class="menu-box-wrap">
+        <div class="menu-tab-image">
+          <img src="menu2.jpg">
+        </div>
+        <div class="menu-list">
+          <% Menu.all.each do |menu| %>
+            <% if menu.category_id == 2 %>
+              <div class="menu-tab">
+                <div class="menu-tab-title">
+                  <h3><%= menu.name %></h3>
+                  <p class="title-cap">
+                    <%= menu.detail %>
+                  </p>
+                </div>
+                <div class="menu-price">
+                  <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+          <div class="menu-etc">
+            <p>etc...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="menu-box">
+      <div class="category-title">
+        <h2>Dessert</h2>
+      </div>
+      <div class="menu-dessert-text">
+        <p class="menu-dessert-text1">
+          季節に合わせて変化するgorm'sオリジナルのデザートを揃えました。
+        </p>
+        <p class="menu-dessert-text2">
+          1. マルキーズショコラ<br>
+          2. ティラミス<br>
+          3. 紅茶（アールグレイ）のクリームブリュレ<br>
+          4. ディルのブラマンジェ、メロンのソース<br>
+          5. バラ、ライチ、ラズベリーのパンナコッタ
+        </p>
+      </div>
+      <div class="menu-box-wrap">
+        <div class="menu-list">
+          <% Menu.all.each do |menu| %>
+            <% if menu.category_id == 3 %>
+              <div class="menu-tab">
+                <div class="menu-tab-title">
+                  <h3><%= menu.name %></h3>
+                  <p class="title-cap">
+                    <%= menu.detail %>
+                  </p>
+                </div>
+                <div class="menu-price">
+                  <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+        <div class="menu-tab-image">
+          <img src="menu5.jpg">
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="menu-box2">
+      <div class="menu-box2-wrap">
+        <div class="category-title2">
+          <h2>Red Wine</h2>
+        </div>
+        <div class="menu-box-wrap">
+          <div class="menu-list2">
+            <% Menu.all.each do |menu| %>
+              <% if menu.category_id == 4 %>
+                <div class="menu-tab">
+                  <div class="menu-tab-title2">
+                    <h3><%= menu.name %></h3>
+                    <p class="title-cap">
+                      <%= menu.detail %>
+                    </p>
+                  </div>
+                  <div class="menu-price">
+                    <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+            <div class="menu-etc2">
+              <p>この他、常時30種類ほどご用意しております。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="menu-box2-wrap">
+        <div class="category-title2">
+          <h2>White Wine</h2>
+        </div>
+        <div class="menu-box-wrap">
+          <div class="menu-list2">
+            <% Menu.all.each do |menu| %>
+              <% if menu.category_id == 5 %>
+                <div class="menu-tab">
+                  <div class="menu-tab-title2">
+                    <h3><%= menu.name %></h3>
+                    <p class="title-cap">
+                      <%= menu.detail %>
+                    </p>
+                  </div>
+                  <div class="menu-price">
+                    <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+            <div class="menu-etc2">
+              <p>この他、常時30種類ほどご用意しております。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="menu-box2">
+      <div class="menu-box2-wrap">
+        <div class="category-title2">
+          <h2>Other</h2>
+        </div>
+        <div class="menu-box-wrap">
+          <div class="menu-list2">
+            <% Menu.all.each do |menu| %>
+              <% if menu.category_id == 6 %>
+                <div class="menu-tab">
+                  <div class="menu-tab-title2">
+                    <h3><%= menu.name %></h3>
+                    <p class="title-cap">
+                      <%= menu.detail %>
+                    </p>
+                  </div>
+                  <div class="menu-price">
+                    <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+            <div class="menu-etc2">
+              <p>etc...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      <div class="menu-box2-wrap">
+        <div class="category-title2">
+          <h2>Coffee & Soft Drink</h2>
+        </div>
+        <div class="menu-box-wrap">
+          <div class="menu-list2">
+            <% Menu.all.each do |menu| %>
+              <% if menu.category_id == 7 %>
+                <div class="menu-tab">
+                  <div class="menu-tab-title2">
+                    <h3><%= menu.name %></h3>
+                    <p class="title-cap">
+                      <%= menu.detail %>
+                    </p>
+                  </div>
+                  <div class="menu-price">
+                    <p><%= number_to_currency(menu.price, :unit => "¥", :precision => 0) %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+            <div class="menu-etc2">
+              <p>etc...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section>
+    <div class="menu-btn">
+      <p class="menu-top-btn"><a href="/">トップページへ</a></p>
+    </div>
+  </section>
+</section>
+
+
+
+
+
+
+
+
+<!--slider slick-->
+<script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        accessibility: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 1200,
+        pauseOnHover: false,
+        fade: true,
+        arrows: true,
+        infinite: true,
+        initialSlide: 0,
+        slidesToScroll: 1,
+        swipe: true
+      });
+    });
+</script>
+
+
+
+<!--カーソル追従-->
+<script>
+  if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
+      $(function(){
+          var body = document.body;
+          var cursor = document.createElement("div");
+          var stalker = document.createElement("div");
+          cursor.id = "cursor";
+          stalker.id = "stalker";
+          body.appendChild(cursor);
+          body.appendChild(stalker);
+          body.addEventListener("mousemove", function(e) {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+                stalker.style.left = e.clientX + "px";
+                stalker.style.top = e.clientY + "px";
+          }, false);
+   
+          $("a").on("mouseenter", function() {
+              $('#cursor').addClass("active");
+              $('#stalker').addClass("active");
+          });
+   
+          $("a").on("mouseleave", function() {
+              $('#cursor').removeClass("active");
+              $('#stalker').removeClass("active");
+          });
+      });
+  }      
+</script>
+
+
+
+<!--フェードイン-->
+<script>
+  $(function(){
+    $(window).scroll(function (){
+      $('section').each(function(){
+        //「offset」で要素の位置を取得する。
+          let dummy = $(this).offset().top,
+              scroll = $(window).scrollTop(),
+              windowHeight = $(window).height();
+              //50は余白で差し掛かってもすぐに表示しないようにするため。
+            if(scroll > dummy - windowHeight + 80){
+                $(this).addClass('scrollin');
+              }
+          });
+      });
+  });
+</script>
+
+<style>
+  section{
+     opacity:0;
+     transform:translate(0, 0);
+     transition:all 2000ms;
+   }
+   
+   body > div.container > section.concept_top {
+     opacity: 1;
+     transform:translate(0 , 0);
+   }
+  
+   section.scrollin {
+     opacity: 1;
+     transform:translate(0 , 0);
+   }
+</style>

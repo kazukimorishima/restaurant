@@ -1,0 +1,9 @@
+<div class="admin">
+    <h1>ディナー写真一覧</h1>
+    <hr>
+    <% @dinners.each do |d| %>
+      <%= image_tag d.image.url(:thumb) %>
+      <hr>
+    <% end %>
+    <a href="/admin"><button type="button" class="btn btn-success">トップに戻る</button></a>
+</div>

@@ -1,0 +1,9 @@
+<div class="admin">
+    <h1>メニュー一覧</h1>
+    <hr>
+    <% @menus.each do |m| %>
+      <p><a href="/menus/<%= m.id %>/edit"><%= m.name %></a></p>
+      <hr>
+    <% end %>
+    <a href="/admin"><button type="button" class="btn btn-success">トップに戻る</button></a>
+</div>

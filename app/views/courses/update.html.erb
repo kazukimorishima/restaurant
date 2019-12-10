@@ -1,0 +1,11 @@
+<div class="admin">
+    <h1>コース写真が変更されました</h1>
+    <p>名前</p>
+    <%= @course.name %>
+    <p>詳細</p>
+    <%= @course.detail %>
+    <p>写真</p>
+    <%= image_tag @course.image.url(:medium) %>
+    <hr>
+    <a href="/admin"><button type="button" class="btn btn-success">トップに戻る</button></a>
+</div>
