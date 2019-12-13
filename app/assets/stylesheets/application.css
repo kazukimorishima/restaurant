@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
 
 
 .wrap {
@@ -88,6 +90,7 @@ a {
     left: 0;
     z-index: 2;
     transition: .5s;
+    padding-right: 25px;
 }
 
 .header-logo {
@@ -747,6 +750,7 @@ a {
 }
 
 .footer-logo {
+    margin-top: 15px;
     margin-left: 3%;
     width: 35%;
 }
