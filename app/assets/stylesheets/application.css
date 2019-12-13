@@ -114,7 +114,7 @@ a {
 .header-nav {
     width: 70%;
     text-align: right;
-    margin-right: 15px;
+    /*margin-right: 15px;*/
 }
 
 .header-list {
