@@ -2,7 +2,7 @@
     <h1>スペース写真一覧</h1>
     <hr>
     <% @spaces.each do |s| %>
-      <%= image_tag s.image.url(:thumb) %>
+      <a href="/spaces/<%= s.id %>/edit"><%= image_tag s.image.url(:thumb) %></a>
       <hr>
     <% end %>
     <a href="/admin"><button type="button" class="btn btn-success">トップに戻る</button></a>
